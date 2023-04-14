@@ -68,15 +68,18 @@ function alertMe2() {
     alert("hello from alertMe2")
 }
 
-function addition(val1, val2, val3) {
-    const result = val1 + val2;
-    val3()
+function addition(a, b, c) {
+    const result = a + b;
+    c();
+    console.log(result)
     return result;
 }
 
-addition(4, 6, alertMe2)
+//addition(4, 6, alertMe2)
 
-
+addition(4, 6, () => {
+    alert("i am arrow function")
+})
 
 </script>
 
