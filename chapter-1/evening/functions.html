@@ -54,11 +54,29 @@
 // sum(4, 5);
 
 /* Arrow Function */
-const sum = (val1, val2) => {
-     const result = val1 + val2;
-     console.log(result);
+// const sum = (val1, val2) => {
+//      const result = val1 + val2;
+//      console.log(result);
+// }
+// sum(5, 6)
+
+/* Callback functions */
+function alertMe() {
+    alert("hello from alertMe")
 }
-sum(5, 6)
+function alertMe2() {
+    alert("hello from alertMe2")
+}
+
+function addition(val1, val2, val3) {
+    const result = val1 + val2;
+    val3()
+    return result;
+}
+
+addition(4, 6, alertMe2)
+
+
 
 </script>
 
