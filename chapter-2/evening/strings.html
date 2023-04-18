@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>
+</head>
+<body>
+
+<script>
+
+const str = "hello world";
+console.log(str.length)
+console.log( str.toUpperCase()  )
+
+// get a specific character as array index
+console.log( str[4] )
+
+// replace a specific word with other word
+const str2 = "this is my class room, i am ali"
+
+const result = str2.replace("my", "Your");
+console.log(str2);
+console.log(result)
+
+// slice method is used to get chunk of string from paragraph
+// let text = "Hello world!";
+// let result2 = text.slice(0, 4);
+// console.log(result2)
+
+let result2 = str2.slice(8, 10);
+console.log(result2)
+
+// split method is used to split string by specific 
+// conditional argument. and return array
+const str3 = "my,name,ali"
+const resAr = str3.split(",");
+
+console.log(resAr[1])
+
+</script>
+
+
+</body>
+</html>
