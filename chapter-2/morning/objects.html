@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in Javascript</title>
+</head>
+<body>
+    
+<script>
+const student = ["ali", "lodhran", 23];
+
+const studentObj = {
+    first_name: "Ali",
+    last_name: "Malik",
+    city: "lodhran",
+    age: 23,
+    fullName: function() {
+        return this.first_name + " " + this.last_name
+    }
+}
+
+console.log(student[1])
+
+console.log(studentObj["age"])
+console.log(studentObj.first_name)
+
+const full_name = studentObj.fullName();
+console.log(full_name)
+
+</script>
+
+</body>
+</html>
