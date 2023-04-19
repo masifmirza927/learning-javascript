@@ -10,7 +10,7 @@
 
 <script>
 
- const fruits = ["apple", "mango", "banana"];
+ const fruits = ["apple", "mango", "banana", "pineapple", "cherry"];
  console.log(fruits)
 
  // push() -> insert new item in the end of the array
@@ -28,11 +28,55 @@
 
 // forEach() -> loop through an array  
 
+    // fruits.forEach( (item, index) => {
+    //     console.log(item, index)
+    // } )
 
-fruits.forEach( (item, index) => {
-    console.log(item, index)
-} )
+// filter() -> filterout the items by some callback function
+// and return those filtered items in array
 
+// const newItems = fruits.filter( (item) => {
+//     if(item.length < 6) {
+//         return item
+//     }
+//     //return item.length < 6
+// })
+
+    // const users = [16, 14, 18, 19, 20];
+    // console.log(users)
+    // const adultsUsers = users.filter( (age) => {
+    //     return age >= 18
+    // })
+
+    // console.log(adultsUsers)
+
+ /*--------------------------------------------------*/
+
+ // map() -> map method used to update/change items of array
+ // and return the updated items array 
+    //  const nums = [2, 4, 5, 6];
+    //  console.log(nums);
+
+    //  const updatedNums = nums.map( (item) => {
+    //     return item * 2
+    //  })
+
+    //  console.log(updatedNums);
+
+/* ------------------------------------------------------ */
+// find() -> method used to find an item in the array
+
+const existing = fruits.find( (item) => {
+    if(item == 'mango') {
+        return item
+    }
+})
+
+if(existing) {
+    alert("yes available")
+}else {
+    alert("not available")
+}
 
 </script>
 
