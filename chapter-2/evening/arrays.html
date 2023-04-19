@@ -37,12 +37,53 @@ console.log(fruits);
 
 // forEach() -> its used to loop in the array
 
-fruits.forEach( (item, index) => {
-    console.log(item, index)
-} )
+// fruits.forEach( (item, index) => {
+//     console.log(item, index)
+// } )
 
-//console.log(fruits);
+/* ------------------ ----------- */
 
+// find() -> find method is used to find 
+// an item in the array
+
+// const found = fruits.find( (item, index) => {
+//     if(item == 'apple') {
+//         return item;
+//     }
+// })
+
+// if(found) {
+//     alert("Yes available")
+// }else {
+//     alert("Out of stock")
+// }
+
+/* ----------------------------------- */
+// filter() -> its used to filter out some items
+// from the array with some condition
+// its return the result as an array
+
+    // const ages = [16, 18, 19, 10, 20];
+
+    // const results = ages.filter( (age) => {
+    //     if(age >= 18) {
+    //         return age;
+    //     }
+    // })
+
+    // console.log(results)
+
+/* ----------------------------------- */
+// map() -> map method is used to manipulate 
+// each item of the array and returns the
+// manipulated results array
+const nums = [2, 4, 5, 7, 9];
+const results = nums.map( (item) => {
+    return item * 2;
+})
+
+console.log(nums)
+console.log(results)
 
 
 </script>    
