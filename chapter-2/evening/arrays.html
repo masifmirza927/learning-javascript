@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays methods in js</title>
+</head>
+<body>
+
+<script>
+const fruits = ["apple", "banana", "cherry"];
+
+console.log(fruits);
+
+// push() -> its used to insert new item in the 
+// array at the end of the array
+    //fruits.push("mango")
+
+/* -------------------------- */    
+
+// pop() -> remove an item from array 
+// from the end of the array
+    //fruits.pop();
+/* -------------------------- */ 
+
+
+// shift() -> it removes item from the array
+// at the start of the array  
+
+    //fruits.shift();
+
+// unshift() -> it insert item at the start
+// of the array
+    //fruits.unshift("pineapple") 
+/* ---------------- ------------- */
+
+// forEach() -> its used to loop in the array
+
+fruits.forEach( (item, index) => {
+    console.log(item, index)
+} )
+
+//console.log(fruits);
+
+
+
+</script>    
+
+</body>
+</html>
