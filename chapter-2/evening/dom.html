@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom in js</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading" >hello world</h1>
+        <p class="para">this is paragraph 1</p>
+        <p class="para">this is paragraph 2</p>
+
+        <h3 class="heading3">hello h3 1</h3>
+        <h3 onmouseover="changeMyColor()" onmouseleave="changeToBlack()" id="heading3b">hello h3 2</h3>
+        <button onclick="changeColor()">Click Me</button>
+    </div>
+
+<script>
+// get element by ID    
+// const heading = document.getElementById("heading");
+//  //console.log(heading)
+// heading.style.color = 'red'
+/* -------------------------------------------- */
+
+// target element by class-name
+const paras = document.getElementsByClassName("para");
+    //console.log(paras)
+paras[0].style.color = 'blue'
+
+/* -------------------------------------------- */
+// query selector
+const h3 = document.querySelector(".para");
+
+// select all elements
+const h3s = document.querySelectorAll(".para");
+h3s[1].style.color = "green"
+
+/* -------------------------------------------- */
+// events
+function changeColor() {
+    const heading = document.getElementById("heading");
+    heading.style.color = "red";
+
+}
+
+function changeMyColor() {
+    const heading3 = document.getElementById("heading3b")
+    heading3.style.color = "red";
+}
+
+function changeToBlack() {
+    const heading3 = document.getElementById("heading3b")
+    heading3.style.color = "black";
+}
+</script>
+
+</body>
+</html>
