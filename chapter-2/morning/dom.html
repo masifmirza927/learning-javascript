@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom in js</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading" >hello world</h1>
+        <p class="para">this is paragraph 1</p>
+        <p class="para">this is paragraph 2</p>
+
+        <h3 class="heading3" id="heading3id" onmouseover="changeColor()">hello h3 1</h3>
+        <h3>hello h3 2</h3>
+        <button onclick="alertMe()" onmouseleave="onMouseLeave()">Click Me</button>
+    </div>
+
+
+<script>
+// select element by ID
+// const heading = document.getElementById("heading")
+
+// heading.style.color = 'red'
+// heading.style.backgroundColor = "#4ac2de"
+/* -------------------------------------------- */
+
+// target element by Class name
+const paras = document.getElementsByClassName("para")
+paras[0].style.color = 'red'
+//console.log(paras[1])
+
+/* ------------------------------------------------- */
+
+// target elements by nodeName 
+const allP = document.getElementsByTagName("h3");
+allP[1].style.color = "red"
+
+
+/* -------------------------------------------- */
+
+// query selector
+    const h3 = document.querySelector(".heading3");
+    const para2 = document.querySelectorAll(".para");
+
+
+    console.log(para2[1].style.color = 'green')
+
+console.log(para2[1].style.color = 'green')
+
+/* ---------------------------------------------- */
+// Events
+
+function alertMe() {
+    const heading = document.getElementById("heading")
+
+heading.style.color = 'red'
+heading.style.backgroundColor = "#4ac2de"
+}
+
+function onMouseLeave() {
+    const heading = document.getElementById("heading");
+    heading.style.color = 'black'
+}
+
+function changeColor() {
+    const heading3 = document.getElementById("heading3id")
+    heading3.style.color = "blue"
+}
+
+</script>    
+</body>
+</html>
