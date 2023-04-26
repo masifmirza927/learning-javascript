@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom elements</title>
+</head>
+<body>
+    
+    <div id="container">
+        <p id="para">hello world</p>
+
+        <button onclick="updateText()">Update Heading</button>
+        <button onclick="insertElement()">New Element</button>
+    </div>
+    
+<script>
+// string literals
+// const a = "hello"
+// const str = a + " world" + "\n" + "aaa";
+
+// const str2 = `${a} world 
+// asdf
+// aaaaaaaaa
+// `;
+// console.log(str)
+// console.log(str2)
+/* -------------------------------- */
+
+// update elements
+function updateText() {
+    const para = document.getElementById("para");
+    para.innerHTML = "updated"
+}
+
+// insert new element
+function insertElement() {
+    var userName = "aslam"
+    var heading = `<h1>Welcome to ${userName} </h1> 
+        <h3>how are you?</h3>
+    `;
+    const para = document.getElementById("para");
+
+    // change whole html of element
+     para.innerHTML = heading;
+    
+}
+
+
+</script>    
+
+</body>
+</html>
