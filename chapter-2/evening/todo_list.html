@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <input type="text" id="inputField" />
+            <button class="addNew" onclick="addNew()">Add</button>
+        </div>
+        <div class="list_box">
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+<script>
+
+function addNew() {
+   const inputVal = document.getElementById("inputField").value;
+   
+// create new li element
+const li = document.createElement("li");
+
+// insert input value into list item i.e li
+li.innerHTML = inputVal
+
+// select target ul 
+const list = document.getElementById("list");
+
+// insert element into ul list
+    list.insertAdjacentElement("beforeend", li);
+
+}
+
+</script>
+</body>
+</html>
