@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo app</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="inputField" />
+        <button onclick="addNew()">Add</button>
+        <div>
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+<script>
+
+
+function addNew() {
+const input = document.getElementById("inputField");
+
+// creating new element
+// const li = document.createElement("li");
+// li.innerHTML = input.value;
+const li = `<li>${input.value}
+        <button onClick="del(this)">X</button>
+    </li>`;
+
+
+
+// select target ul list
+    const list = document.getElementById("list");
+    // list.insertAdjacentElement("afterbegin", li);
+    list.insertAdjacentHTML("beforeend", li);
+    
+
+}
+// removing element from dom
+function del(elem) {
+   elem.parentNode.remove();
+}
+
+</script>
+</body>
+</html>
