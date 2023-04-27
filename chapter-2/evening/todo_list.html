@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo list</title>
 </head>
+
 <body>
-    
+
     <div class="container">
         <div class="box">
             <input type="text" id="inputField" />
@@ -18,25 +20,104 @@
         </div>
     </div>
 
-<script>
+    <script>
 
-function addNew() {
-   const inputVal = document.getElementById("inputField").value;
-   
-// create new li element
-const li = document.createElement("li");
+        function addNew() {
+            const inputVal = document.getElementById("inputField").value;
 
-// insert input value into list item i.e li
-li.innerHTML = inputVal
+            // create new li element
+            // const li = document.createElement("li");
 
-// select target ul 
-const list = document.getElementById("list");
+// new li element as html
+            const li = `<li>
+                    <span class="text">${inputVal}</span>
+                    <span class="buttons">
+                        <button onclick="del(this)">X</button>
+                    </span>   
+                </li>`;
 
-// insert element into ul list
-    list.insertAdjacentElement("beforeend", li);
+            // insert input value into list item i.e li
+                //li.innerHTML = inputVal
 
+            // select target ul 
+            const list = document.getElementById("list");
+
+            // insert element into ul list
+              // list.insertAdjacentElement("beforeend", li);
+              list.insertAdjacentHTML("beforeend", li)
+
+            // empty input field
+            document.getElementById("inputField").value = "";
+            document.getElementById("inputField").focus();
+        }
+
+// create delete function
+function del(elem) {
+    // console.log(elem.parentNode.parentNode)
+    elem.parentNode.parentNode.remove();
 }
 
-</script>
+
+
+    </script>
+
+
+<style>
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+.container {
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #efefef;
+}
+.box {
+    display: flex;
+    justify-content: center;
+}
+input {
+    display: inline-block;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+.addNew {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+ul li span{
+    display: block;
+    font-size: 20px;
+    background-color: #fff;
+}
+.list_box {
+    padding-top: 20px;
+}
+.buttons > button {
+    padding: 5px 8px;
+    cursor: pointer;
+}
+.buttons > button:first-child {
+    background-color: red;
+    font-weight: bold;
+    color: #fff;
+}
+</style>
 </body>
+
 </html>
