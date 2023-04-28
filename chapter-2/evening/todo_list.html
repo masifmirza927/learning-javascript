@@ -12,7 +12,7 @@
 
     <div class="container">
         <div class="box">
-            <input type="text" id="inputField" />
+            <input onkeyup="enterKeyBtn(event)"  type="text" id="inputField" />
             <button class="addNew" onclick="addNew()">Add</button>
         </div>
         <div class="list_box">
@@ -22,8 +22,20 @@
 
     <script>
 
+        // control enter key press
+        function enterKeyBtn(event) {
+            //console.log(event.key)
+            if(event.key == "Enter") {
+                addNew()
+            }
+        }
+
         function addNew() {
             const inputVal = document.getElementById("inputField").value;
+            if(inputVal == "") {
+                alert("input field is empty");
+                return;
+            }
 
             // create new li element
             // const li = document.createElement("li");
