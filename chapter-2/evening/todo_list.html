@@ -42,6 +42,7 @@
 
 // new li element as html
             const li = `<li>
+                    <span><input onclick="checkMe(this)" type="checkbox" /></span>
                     <span class="text">${inputVal}</span>
                     <span class="buttons">
                         <button onclick="del(this)">X</button>
@@ -57,7 +58,7 @@
 
             // insert element into ul list
               // list.insertAdjacentElement("beforeend", li);
-              list.insertAdjacentHTML("beforeend", li)
+              list.insertAdjacentHTML("afterbegin", li)
 
             // empty input field
             document.getElementById("inputField").value = "";
@@ -88,6 +89,23 @@ document.getElementById("inputField").value = span.innerText
     del(elem);
 }
 
+// checkbox function
+function checkMe(elem) {
+     // select parent li
+     const li = elem.parentNode.parentNode;
+     // select input text span
+    const span = li.querySelector(".text");
+   
+    //console.log(span.classList);
+
+    if(elem.checked == true) {
+        span.classList.add("strike")
+    }else {
+        span.classList.remove("strike")
+    }
+
+}
+
 
 
     </script>
@@ -96,6 +114,9 @@ document.getElementById("inputField").value = span.innerText
 <style>
 * {
     margin: 0; padding: 0; box-sizing: border-box;
+}
+.strike {
+    text-decoration: line-through;
 }
 .container {
     width: 600px;
