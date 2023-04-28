@@ -45,6 +45,7 @@
                     <span class="text">${inputVal}</span>
                     <span class="buttons">
                         <button onclick="del(this)">X</button>
+                        <button onclick="edit(this)">Edit</button>
                     </span>   
                 </li>`;
 
@@ -67,6 +68,24 @@
 function del(elem) {
     // console.log(elem.parentNode.parentNode)
     elem.parentNode.parentNode.remove();
+}
+
+// edit function
+function edit(elem) {
+ // select parent li
+    const li = elem.parentNode.parentNode;
+     //console.log(li);
+// select input text span
+    const span = li.querySelector(".text");
+        //console.log(span.innerText)
+
+// step - 3 
+    // send back the span.innerText to input field
+document.getElementById("inputField").value = span.innerText    
+
+// step - 4
+    // remove selected li
+    del(elem);
 }
 
 
